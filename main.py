@@ -2,8 +2,15 @@
 VERSION = ".1"
 AUTHORS = ["Wade Marshall", "Talor Tolbert"]
 
+
 def init():
-    print("Black jack, version %s. Created by %s") % (VERSION, getAuthors())
+    """Startup Function, everything should start here"""
+    print("Black jack, version v%s. Created by %s") % (VERSION, getAuthors())
+    print("Githug Repository: " +
+          "https://github.com/wmmnola/PLTW-ApCompSCI-Collab-Project")
+    print("This project is Licensed with the GPL 3.0 License.")
+    print("Any attempt to redistribute this software as non-free software is" +
+          " illegal")
 
 
 def getAuthors():
