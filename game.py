@@ -21,4 +21,15 @@ def game_end():
 
 
 def user_prompt():
-    pass
+    print ("Hit or Stand?")
+    x = raw_input("")
+    print x.lower()
+    if "hit" in x.lower():
+        draw_card()
+        print("You hit")
+    elif x.lower() is "stand":
+        draw_card()
+        print("you stood")
+    else:
+        print("yo momma type better than u")
+    return

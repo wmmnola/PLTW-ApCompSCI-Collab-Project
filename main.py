@@ -1,4 +1,5 @@
 """Main File"""
+import game
 VERSION = ".1"
 AUTHORS = ["Wade Marshall", "Talor Tolbert"]
 
@@ -10,7 +11,8 @@ def init():
           "https://github.com/wmmnola/PLTW-ApCompSCI-Collab-Project")
     print("This project is Licensed with the GPL 3.0 License.")
     print("Any attempt to redistribute this software as non-free software is" +
-          " illegal")
+          " illegal.")
+    game.user_prompt()
 
 
 def getAuthors():
