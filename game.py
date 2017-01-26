@@ -11,9 +11,7 @@ def game_debug():
     """Debug method for checking  functions"""
     # the start()function is NOT TO BE CALLED FROM THIS FUNCTION!!!!!!!!!!!
     # user_prompt()
-    deck = generate_deck()
-    draw_card(player_hand, deck)
-    print(display_hand(player_hand))
+
 
 
 
