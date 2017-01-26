@@ -31,7 +31,7 @@ def generate_deck():
         # print(deck[x].real_value)
     return deck
 
-def hand_sum(hand)
+def hand_sum(hand):
     sum = 0
     for card in hand:
         sum = sum + card.real_value
