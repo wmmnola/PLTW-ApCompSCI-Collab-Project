@@ -15,7 +15,6 @@ def game_debug():
     draw_card(player_hand, deck)
 
 
-
 def game_start():
     """Main game method. """
     # TODO make the stupid game
