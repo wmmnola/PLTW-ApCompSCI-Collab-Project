@@ -23,9 +23,9 @@ def getAuthors():
             authors += "and "
         authors += "%s" % x
         if x is AUTHORS[len(AUTHORS) - 1]:
-            authors+=" "
+            authors += " "
         else:
-            authors+= ", "
+            authors += ", "
     return authors
 
 
