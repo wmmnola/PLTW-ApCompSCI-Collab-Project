@@ -1,5 +1,5 @@
+import card
 
-deck = []
 ai_hand = []
 player_hand = []
 # When a card is drawn, it will be spliced from the deck array, and then
@@ -9,7 +9,8 @@ player_hand = []
 def game_debug():
     """Debug method for checking  functions"""
     # the start()function is NOT TO BE CALLED FROM THIS FUNCTION!!!!!!!!!!!
-    user_prompt()
+    # user_prompt()
+    generate_deck()
 
 
 def game_start():
@@ -20,8 +21,12 @@ def game_start():
 
 def generate_deck():
     """Generates 52 card deck, card values 1-10, and 12 face cards"""
-    # TODO implement generation technique for cards
-    pass
+    deck = []
+    for x in range(0, 52):
+        deck.append(card.Card(x, (x % 13)+1))
+        deck[x].get_real_value()
+        print(deck[x].real_value)
+    return deck
 
 
 def draw_card():
