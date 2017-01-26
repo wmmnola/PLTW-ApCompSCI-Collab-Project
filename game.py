@@ -31,6 +31,11 @@ def generate_deck():
         # print(deck[x].real_value)
     return deck
 
+def hand_sum(hand)
+    sum = 0
+    for card in hand:
+        sum = sum + card.real_value
+    return sum
 
 def draw_card(hand, deck):
     # TODO implement logic to append a random card from deck to a hand
@@ -50,6 +55,7 @@ def ai_draw_card():
 
 def game_end():
     # TODO determine if we need a game_end() function, wouldnt a return work?
+
     pass
 
 
