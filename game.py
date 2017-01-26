@@ -11,7 +11,6 @@ def game_debug():
     """Debug method for checking  functions"""
     # the start()function is NOT TO BE CALLED FROM THIS FUNCTION!!!!!!!!!!!
     # user_prompt()
-    
 
 
 def game_start():
@@ -36,10 +35,8 @@ def hand_sum(hand):
     return sum
 
 def draw_card(hand, deck):
-    # TODO implement logic to append a random card from deck to a hand
-    # TODO encapsulate this function under one draw_card() function
     size = len(deck)-1
-    index = random.randint(0,size)
+    index = random.randint(0, size)
     card = deck[index]
     del deck[index]
     hand.append(card)
@@ -55,6 +52,14 @@ def game_end():
     # TODO determine if we need a game_end() function, wouldnt a return work?
 
     pass
+
+
+def display_hand(hand):
+    """Takes a hand array, returns a string to be printed"""
+    str_hand = ""
+    for x in hand:
+        str_hand += "%s " % x.real_value
+    return str_hand
 
 
 def user_prompt():
