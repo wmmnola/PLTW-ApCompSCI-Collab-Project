@@ -1,4 +1,5 @@
 import card
+import random
 
 ai_hand = []
 player_hand = []
@@ -10,7 +11,9 @@ def game_debug():
     """Debug method for checking  functions"""
     # the start()function is NOT TO BE CALLED FROM THIS FUNCTION!!!!!!!!!!!
     # user_prompt()
-    generate_deck()
+    deck = generate_deck()
+    draw_card(player_hand, deck)
+
 
 
 def game_start():
@@ -25,14 +28,19 @@ def generate_deck():
     for x in range(0, 52):
         deck.append(card.Card(x, (x % 13)+1))
         deck[x].get_real_value()
-        print(deck[x].real_value)
+        # print(deck[x].real_value)
     return deck
 
 
-def draw_card():
+def draw_card(hand, deck):
     # TODO implement logic to append a random card from deck to a hand
     # TODO encapsulate this function under one draw_card() function
-    pass
+    size = len(deck)-1
+    index = random.randint(0,size)
+    card = deck[index]
+    del deck[index]
+    hand.append(card)
+    return hand
 
 
 def ai_draw_card():
