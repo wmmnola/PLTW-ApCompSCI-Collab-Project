@@ -12,7 +12,7 @@ def init():
     print("This project is Licensed with the GPL 3.0 License.")
     print("Any attempt to redistribute this software as non-free software is" +
           " illegal.")
-    game.user_prompt()
+    game.game_debug()
 
 
 def getAuthors():
@@ -21,7 +21,7 @@ def getAuthors():
     for x in AUTHORS:
         if x is AUTHORS[len(AUTHORS) - 1]:
             authors += "and "
-        authors += "%s " % x
+        authors += "%s, " % x
     return authors
 
 
