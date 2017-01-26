@@ -13,8 +13,6 @@ def game_debug():
     # user_prompt()
 
 
-
-
 def game_start():
     """Main game method. """
     # TODO make the stupid game
@@ -30,6 +28,11 @@ def generate_deck():
         # print(deck[x].real_value)
     return deck
 
+def hand_sum(hand):
+    sum = 0
+    for card in hand:
+        sum = sum + card.real_value
+    return sum
 
 def draw_card(hand, deck):
     size = len(deck)-1
@@ -47,6 +50,7 @@ def ai_draw_card():
 
 def game_end():
     # TODO determine if we need a game_end() function, wouldnt a return work?
+
     pass
 
 
