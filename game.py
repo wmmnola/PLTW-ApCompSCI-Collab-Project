@@ -13,6 +13,7 @@ def game_debug():
     # user_prompt()
 
 
+
 def game_start():
     """Main game method. """
     # TODO make the stupid game
@@ -34,12 +35,13 @@ def hand_sum(hand):
         sum = sum + card.real_value
     return sum
 
-def draw_card(hand, deck):
-    size = len(deck)-1
-    index = random.randint(0, size)
-    card = deck[index]
-    del deck[index]
-    hand.append(card)
+def draw_card(hand, deck, number_cards):
+    for x in range(0, number_cards):
+        size = len(deck)-1
+        index = random.randint(0, size)
+        card = deck[index]
+        del deck[index]
+        hand.append(card)
     return hand
 
 
