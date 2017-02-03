@@ -1,5 +1,6 @@
 """Main File"""
 import game
+import sys
 VERSION = ".1"
 AUTHORS = ["Wade Marshall", "Talor Tolbert"]
 
@@ -28,5 +29,7 @@ def getAuthors():
             authors += ", "
     return authors
 
-
+def panic():
+    print("You broke my game. How did you break my game???")
+    sys.exit()
 init()

@@ -63,8 +63,16 @@ def display_hand(hand):
         str_hand += "%s " % x.real_value
     return str_hand
 
+def compare(player_hand, ai_hand):
+    """compares hands False means the player lost. True means the player won"""
+    if hand_sum(hand) > 21: return False
+    elif player_hand < ai_hand: return False
+    elif player_hand > ai_hand: return True
+    elif player_hand == ai_hand: return "TIE"
+    else: main.panic()
 
-def user_prompt():
+
+def user_prompt(hand,deck):
     """prompts the user wether they want another card or not"""
     # TODO properly implement the game logic for this
     print("Hit or Stand?")
