@@ -1,5 +1,6 @@
 """Main File"""
 import game
+import sys
 VERSION = ".1"
 AUTHORS = ["Wade Marshall", "Talor Tolbert"]
 
@@ -11,7 +12,7 @@ def init():
           "https://github.com/wmmnola/PLTW-ApCompSCI-Collab-Project")
     print("This project is Licensed with the GPL 3.0 License.")
     print("Any attempt to redistribute this software as non-free software is" +
-          " illegal`.")
+          " illegal.")
     game.game_debug()
 
 
@@ -28,5 +29,7 @@ def getAuthors():
             authors += ", "
     return authors
 
-
+def panic():
+    print("You broke my game. How did you break my game???")
+    sys.exit()
 init()

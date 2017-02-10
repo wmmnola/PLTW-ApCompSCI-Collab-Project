@@ -29,13 +29,19 @@ def generate_deck():
         # print(deck[x].real_value)
     return deck
 
+def hand_sum(hand):
+    sum = 0
+    for card in hand:
+        sum = sum + card.real_value
+    return sum
 
-def draw_card(hand, deck):
-    size = len(deck)-1
-    index = random.randint(0, size)
-    card = deck[index]
-    del deck[index]
-    hand.append(card)
+def draw_card(hand, deck, number_cards):
+    for x in range(0, number_cards):
+        size = len(deck)-1
+        index = random.randint(0, size)
+        card = deck[index]
+        del deck[index]
+        hand.append(card)
     return hand
 
 
@@ -46,6 +52,7 @@ def ai_draw_card():
 
 def game_end():
     # TODO determine if we need a game_end() function, wouldnt a return work?
+
     pass
 
 
@@ -56,8 +63,16 @@ def display_hand(hand):
         str_hand += "%s " % x.real_value
     return str_hand
 
+def compare(player_hand, ai_hand):
+    """compares hands False means the player lost. True means the player won"""
+    if hand_sum(hand) > 21: return False
+    elif player_hand < ai_hand: return False
+    elif player_hand > ai_hand: return True
+    elif player_hand == ai_hand: return "TIE"
+    else: main.panic()
 
-def user_prompt():
+
+def user_prompt(hand,deck):
     """prompts the user wether they want another card or not"""
     # TODO properly implement the game logic for this
     print("Hit or Stand?")
