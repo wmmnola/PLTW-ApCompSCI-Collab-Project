@@ -66,9 +66,9 @@ def display_hand(hand):
 def compare(player_hand, ai_hand):
     """compares hands False means the player lost. True means the player won"""
     if hand_sum(hand) > 21: return False
-elif hand_sam(player_hand) < hand_sam(ai_hand): return False
-    elif player_hand > ai_hand: return True
-    elif player_hand == ai_hand: return "TIE"
+    elif hand_sum(player_hand) < hand_sum(ai_hand): return False
+    elif hand_sum(player_hand) > hand_sum(ai_hand): return True
+    elif hand_sum(player_hand) == hand_sum(ai_hand): return "TIE"
     else: main.panic()
 
 
