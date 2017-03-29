@@ -13,7 +13,7 @@ def init():
     print("This project is Licensed with the GPL 3.0 License.")
     print("Any attempt to redistribute this software as non-free software is" +
           " illegal.")
-    game.game_debug()
+    game.game_start()
 
 
 def getAuthors():
